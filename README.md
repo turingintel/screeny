@@ -19,7 +19,7 @@ Screeny is an easy-to-use tool that records your screen activity and tracks keyb
 
 2. Copy and paste this single line:
    ```
-   bash <(curl -L https://raw.githubusercontent.com/turingintel/screeny/v0.1.14/screeny.sh)
+   bash <(curl -L https://raw.githubusercontent.com/turingintel/screeny/v0.1.0/screeny.sh)
    ```
 
 3. Press Enter and follow the on-screen instructions
