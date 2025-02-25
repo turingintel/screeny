@@ -1,0 +1,36 @@
+[package]
+name = "screeny"
+version = "0.1.14"
+edition = "2021"
+
+[package.metadata.bundle]
+identifier = "com.turingintel.screeny"
+icon = ["assets/icon.icns"]
+copyright = "Copyright (c) 2025 Turing Intelligence"
+category = "public.app-category.utilities"
+short_description = "Screen Recording Application"
+long_description = """
+A screen recording application with input monitoring capabilities.
+"""
+
+[dependencies]
+scap = "0.0.8"
+rdev = "0.5.3"
+chrono = "0.4"
+anyhow = "1.0"
+dirs = "6.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ctrlc = { version = "3.4.5", features = ["termination"] }
+lazy_static = "1.5.0"
+indicatif = "0.17"
+colored = "3.0.0"
+ureq = { version = "2.9.1", features = ["json"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-graphics = "0.24.0"
+core-foundation = "0.10.0"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows-capture = "1.4.2"
+winapi = { version = "0.3.9", features = ["shellscalingapi", "hidusage", "libloaderapi"] }
